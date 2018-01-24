@@ -10,4 +10,4 @@ while day.year <= today.year + 10:
         Monday8 += 1
     day += datetime.timedelta(days = 1)
 
-print Monday8
+print "\nIn the next 10 years,%d Mondays are the 8th of the month they belong to!" % Monday8
