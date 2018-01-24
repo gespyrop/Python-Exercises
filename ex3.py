@@ -14,3 +14,12 @@ def rot13(character):
         else:
             return chr(ord(character) + 13 - len(lower))
 
+sentence = raw_input("\nInsert sentence: ")
+
+new_sentence = ""
+
+for letter in sentence:
+    new_sentence += rot13(letter)
+
+print "\nROT13:", new_sentence
+
