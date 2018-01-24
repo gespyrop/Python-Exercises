@@ -3,16 +3,19 @@ upper = [chr(i) for i in range(ord("A"), ord("Z") + 1)]
 alphabet = lower + upper
 
 def rot13(character):
-    if character == character.upper():
-        if ord(character) + 13 <= ord(upper[-1]):
-            return chr(ord(character) + 13)
+    if character in alphabet:
+        if character == character.upper():
+            if ord(character) + 13 <= ord(upper[-1]):
+                return chr(ord(character) + 13)
+            else:
+                return chr(ord(character) + 13 - len(upper))
         else:
-            return chr(ord(character) + 13 - len(upper))
+            if ord(character) + 13 <= ord(lower[-1]):
+                return chr(ord(character) + 13)
+            else:
+                return chr(ord(character) + 13 - len(lower))
     else:
-        if ord(character) + 13 <= ord(lower[-1]):
-            return chr(ord(character) + 13)
-        else:
-            return chr(ord(character) + 13 - len(lower))
+        return character #ROT13 affects only letters!
 
 sentence = raw_input("\nInsert sentence: ")
 
