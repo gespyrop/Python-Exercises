@@ -6,3 +6,9 @@ while month not in range(1,13):
     month = int(raw_input("\nMonth: "))
 
 year = int(raw_input("Year: "))
+
+months = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"} 
+
+day = datetime.date(year, month, 1)
+
+print "\n\t\t    ", months[month], year, "\n\n\nS\tM\tT\tW\tT\tF\tS\n" + 51 * "_"
