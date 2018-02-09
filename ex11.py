@@ -1,17 +1,17 @@
 import random
 
-alphabet = [chr(i) for i in range(ord("A"),ord("Z") + 1)]
+alphabet = [chr(i) for i in xrange(ord("A"),ord("Z") + 1)]
 
 rows = []
 columns = []
 
-for i in range(100):
+for i in xrange(100):
     row = ""
-    for j in range(100):
+    for j in xrange(100):
         row += alphabet[random.randrange(len(alphabet))]
     rows += [row]
 
-for i in range(100):
+for i in xrange(100):
     column = ""
     for row in rows:
         column += row[i]
