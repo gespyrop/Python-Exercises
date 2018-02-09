@@ -28,6 +28,9 @@ for word in words:
                 inSquare.append(word)
                 break
 
+for word in inSquare:
+    words.remove(word)
+
 for word in words:
     for column in columns:
         if word in column and word not in inSquare:
