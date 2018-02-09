@@ -34,7 +34,11 @@ for word in words:
                 inSquare.append(word)
                 break
 
+print "\n"
 for row in rows:
     print row
 
-print inSquare
+if len(inSquare):
+    print "\nThe square contains the following words:", ",".join(inSquare)
+else:
+    print "\nThe square contains none of the words!"
