@@ -1,4 +1,4 @@
-import random
+from random import randrange
 
 alphabet = [chr(i) for i in xrange(ord("A"),ord("Z") + 1)]
 
@@ -8,7 +8,7 @@ columns = []
 for i in xrange(100):
     row = ""
     for j in xrange(100):
-        row += alphabet[random.randrange(len(alphabet))]
+        row += alphabet[randrange(len(alphabet))]
     rows += [row]
 
 for i in xrange(100):
