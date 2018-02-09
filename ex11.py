@@ -20,7 +20,21 @@ for i in range(100):
 with open("words.txt", "r") as text:
     words = [line.rstrip().upper() for line in text]
 
+inSquare = []
+
+for word in words:
+    for row in rows:
+        if word in row and word not in inSquare:
+                inSquare.append(word)
+                break
+
+for word in words:
+    for column in columns:
+        if word in column and word not in inSquare:
+                inSquare.append(word)
+                break
+
 for row in rows:
     print row
 
-print words
+print inSquare
